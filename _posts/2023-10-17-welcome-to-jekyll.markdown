@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to blog ajitirto.github.io"
 date:   2023-10-17 18:14:37 +0000
 categories: jekyll update
 ---
