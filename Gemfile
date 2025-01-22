@@ -41,3 +41,8 @@ gem "kramdown-parser-gfm"
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem 'webrick', '~> 1.7', require: false
+
+gem 'csv'
+gem 'logger'
+gem 'base64'
+gem 'bigdecimal'
