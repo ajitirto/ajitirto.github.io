@@ -4,15 +4,15 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Motiv :
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+    1. Dokumentasi Pribadi 
+    2. Meningkatkan ketrampilan berbagi ide
+    3. Menggunakan git lebih terstruktur dan lebih aman
+    4. ...
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Goal (objektif): 
 
-
-[jekyll-organization]: https://github.com/jekyll
+    1. Paham dokumentasi, share dengan bahasa yang mudah di cerna
+    2. meningkatkan komunikasi dalam tim, ex: Berikut link tidak usah tanya terus ...
+    3. ...
