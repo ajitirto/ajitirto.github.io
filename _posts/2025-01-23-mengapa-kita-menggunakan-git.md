@@ -3,6 +3,8 @@ layout: post
 title:  "mengapa kita menggunakan Git ?"
 date:   2025-01-23 
 categories: Kenapa Git
+author: ajitirto
+
 ---
 
 
@@ -13,3 +15,6 @@ Bayangkan Git sebagai sebuah percakapan yang tak pernah berhenti. Setiap pengemb
 Kita dapat mengembangkan ide-ide baru tanpa takut merusak dunia yang telah ada. Setiap cabang adalah dunia alternatif, dan kita dapat mengeksplorasi banyak dunia dalam waktu yang sama, memilih mana yang terbaik untuk digabungkan kembali ke dunia utama. Ini seperti menulis novel dengan banyak akhir yang berbeda, tetapi selalu tahu bagaimana menyatukan mereka kembali dengan cara yang membuat cerita tetap utuh.
 
 Pada akhirnya, Git bukan hanya tentang mengelola versi kode. Ia adalah seni menjaga setiap momen dalam perjalanan kreatif kita, menghubungkan pengembang dengan cara yang lebih mendalam, dan memberi kita kebebasan untuk berpikir lebih jauh, lebih bebas, dan lebih aman dalam menciptakan sesuatu yang besar.
+
+Penulis : {{ page.author }}
+
