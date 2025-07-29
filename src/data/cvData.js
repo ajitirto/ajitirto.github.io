@@ -53,7 +53,7 @@ const cvData = {
   ],
   skills: {
     frontend: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3"],
-    backend: ["Golang", 'Php' "RESTful APIs", "GraphQL"],
+    backend: ["Golang", 'Php', "RESTful APIs", "GraphQL"],
     databases: ["PostgreSQL", "MongoDB", "MySQL"],
     tools: ["Git", "Docker", "Jira", "VS Code", "Nvim"],
   },
