@@ -1,12 +1,49 @@
-# React + Vite
+**How I Choose file structure :**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+    my-cv-app/
+    ├── public/
+    │   ├── index.html
+    │   └── favicon.ico
+    ├── src/
+    │   ├── assets/
+    │   │   ├── images/
+    │   │   │   └── profile.jpg
+    │   │   ├── fonts/
+    │   │   └── styles/
+    │   │       ├── _variables.scss  (atau .css)
+    │   │       ├── global.scss
+    │   │       └── mixins.scss
+    │   ├── components/
+    │   │   ├── Header/
+    │   │   │   ├── Header.jsx
+    │   │   │   └── Header.module.scss
+    │   │   ├── Section/
+    │   │   │   ├── Section.jsx
+    │   │   │   └── Section.module.scss
+    │   │   ├── ExperienceItem/
+    │   │   │   ├── ExperienceItem.jsx
+    │   │   │   └── ExperienceItem.module.scss
+    │   │   ├── EducationItem/
+    │   │   │   ├── EducationItem.jsx
+    │   │   │   └── EducationItem.module.scss
+    │   │   ├── SkillItem/
+    │   │   │   ├── SkillItem.jsx
+    │   │   │   └── SkillItem.module.scss
+    │   │   └── Footer/
+    │   │       ├── Footer.jsx
+    │   │       └── Footer.module.scss
+    │   ├── data/
+    │   │   └── cvData.js  (atau .json)
+    │   ├── hooks/
+    │   │   └── useCvData.js
+    │   ├── pages/
+    │   │   └── Home.jsx
+    │   ├── App.jsx
+    │   ├── index.js
+    │   └── reportWebVitals.js
+    ├── .gitignore
+    ├── package.json
+    ├── package-lock.json
+    └── README.md
+``` 
