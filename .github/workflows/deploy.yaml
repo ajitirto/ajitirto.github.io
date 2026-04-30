@@ -21,8 +21,8 @@ jobs:
       - name: Install & Build
         run: |
           cd antigravity/astro
-          npm install
-          npm run build
+          npm install --legacy-peer-deps
+          npm run build 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
