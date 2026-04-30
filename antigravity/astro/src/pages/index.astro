@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import BentoGrid from '../components/BentoGrid.astro';
+import PresentationList from '../components/PresentationList.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import Skills from '../components/Skills.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Aji Tirto Prayogo | Software Engineer">
+	<Header />
+	<main class="pt-32 pb-xl px-6 max-w-[1120px] mx-auto">
+		<Hero />
+		<BentoGrid />
+		<PresentationList />
+		<SocialLinks />
+		<Skills />
+	</main>
+	<Footer />
+</Layout>

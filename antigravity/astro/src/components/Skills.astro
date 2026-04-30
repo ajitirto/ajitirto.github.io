@@ -1,0 +1,16 @@
+---
+const skills = [
+  "Full Stack",
+  "DevOps",
+  "React & Node",
+  "Cloud Native",
+  "System Design"
+];
+---
+<section class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto opacity-60">
+  {skills.map((skill) => (
+    <span class="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 font-label-caps text-[10px] uppercase text-white/60">
+      {skill}
+    </span>
+  ))}
+</section>

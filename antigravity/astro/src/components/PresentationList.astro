@@ -1,0 +1,47 @@
+---
+const presentations = [
+  {
+    title: "Architecting Resilient Cloud Environments",
+    event: "TechSummit 2023",
+    date: "November 14",
+    icon: "present_to_all"
+  },
+  {
+    title: "Micro-Frontends: Scalable Patterns",
+    event: "JS Conf Asia",
+    date: "August 22",
+    icon: "settings_input_component"
+  },
+  {
+    title: "Zero-Trust Security in CI/CD Pipelines",
+    event: "DevOps Days",
+    date: "June 05",
+    icon: "terminal"
+  }
+];
+---
+<section class="mb-xl">
+  <div class="flex items-center gap-4 mb-8">
+    <div class="h-[1px] flex-grow bg-white/10"></div>
+    <h2 class="font-label-caps text-label-caps text-white/40 uppercase tracking-widest">Presentations</h2>
+    <div class="h-[1px] flex-grow bg-white/10"></div>
+  </div>
+  <div class="flex flex-col gap-4">
+    {presentations.map((p) => (
+      <div class="glass-card p-6 rounded-lg flex justify-between items-center group cursor-pointer">
+        <div class="flex items-center gap-6">
+          <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-white/40 group-hover:text-white transition-colors">{p.icon}</span>
+          </div>
+          <div>
+            <h4 class="font-body-lg font-semibold text-white mb-1">{p.title}</h4>
+            <p class="font-body-md text-white/40 text-sm">{p.event} • {p.date}</p>
+          </div>
+        </div>
+        <div class="hidden sm:block">
+          <span class="material-symbols-outlined text-white/20 group-hover:text-white transition-colors">arrow_forward</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

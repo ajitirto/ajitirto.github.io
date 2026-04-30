@@ -1,0 +1,43 @@
+---
+const socialLinks = [
+  {
+    name: "X",
+    href: "https://x.com/prayogo_tirto",
+    icon: null,
+    label: "X"
+  },
+  {
+    name: "Instagram",
+    href: "https://instagram.com/aji_tirto_prayogo",
+    icon: "photo_camera"
+  },
+  {
+    name: "Blog",
+    href: "https://blog.ajitirto.my.id",
+    icon: "article"
+  }
+];
+---
+<section class="mb-xl">
+  <div class="flex items-center gap-4 mb-8">
+    <div class="h-[1px] flex-grow bg-white/10"></div>
+    <h2 class="font-label-caps text-label-caps text-white/40 uppercase tracking-widest">Social Presence</h2>
+    <div class="h-[1px] flex-grow bg-white/10"></div>
+  </div>
+  <div class="flex justify-center gap-6">
+    {socialLinks.map((link) => (
+      <a 
+        href={link.href} 
+        target="_blank" 
+        class="glass-card w-14 h-14 rounded-full flex items-center justify-center group" 
+        title={link.name}
+      >
+        {link.icon ? (
+          <span class="material-symbols-outlined text-white text-2xl group-hover:scale-110 transition-transform">{link.icon}</span>
+        ) : (
+          <span class="text-white font-bold text-lg group-hover:scale-110 transition-transform">{link.label}</span>
+        )}
+      </a>
+    ))}
+  </div>
+</section>

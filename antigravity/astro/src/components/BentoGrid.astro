@@ -1,0 +1,56 @@
+---
+const profileData = [
+  {
+    title: "LinkedIn",
+    description: "Professional network & Career history",
+    href: "https://www.linkedin.com/in/aji-tirto-prayogo/",
+    iconSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1Z8ZeLKNu99m2QeAY3GPM8weIphaYxGciSqEf82wQ6KMbOjO9fB2rA0Ri653GEZWrEFh4m5dFOXz6hkcWL6fgqAq1l5Dy5ERj8rwlslkzf9X5rLCfYG3gbfWaYnJUcUxXc2bfPXqx0-dvdrPLfmZQLgi2VstIJDlAHkfNWVB4MGMClyz2U32iwFWognek1fw73c74mjz1AVyolv7RMqyKh_s30-HqOua_PKwmyMONYuEoRfh-BYWVStFToArg2_gzeSVBv5LZIVhd",
+    featured: false
+  },
+  {
+    title: "GitHub",
+    description: "Open source contributions & Repositories",
+    href: "https://github.com/ajitirto",
+    iconSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuD9jj8WAbWvr1d4gmZyhC_rmj5mFBvYTBeXky8UabHYexLdadU6HY1zULHkJWakGwenSbAB23ZuKLXht9HTo0A65gZWMZ-whzlSGvK906M7VGRsM2wYS4BiODYud7uUO6h_yLMh-gnpucfEtOysh89a1WatPVo5dPaBLz4y8Os88IGNLfgBN6vZdr7NNNy6kRtYz9p3lj7XS5E1WbvUG964nPcMupPlor9diM3m3zi0xmmPPjR3Q5BxjA4RT38OaEh3t0PF_4rvXoXC",
+    featured: true
+  },
+  {
+    title: "GitLab",
+    description: "Enterprise projects & CI/CD workflows",
+    href: "https://gitlab.com/ajitirto",
+    iconSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuBSB1B5GkLoTRwUYMb1mkq5sn0DXn2nlh_UsXmH4ISnTTqDwsfcRVkkOPb_x6t3ojbDufZ6FXPWFeaTkO7QCdfOgx32r7qsPCoQellhVAB-VJqNxJbcLrmZW3Hb83qV-k7BWvScaJh8Qumqrmpe7hgG6SPISxg4XMMmbxPwDE-ChnvYX6BSwMGIPRZwjN2NEjsa_XToxYbQWh-WLPbIB-lMBmo3TAsf7KpbOGcOEWlRzkknQ9nkPnwBnhQPzHR7b5iS_ZZTBWhjTJhI",
+    featured: false
+  }
+];
+---
+<section class="mb-xl">
+  <div class="flex items-center gap-4 mb-8">
+    <div class="h-[1px] flex-grow bg-white/10"></div>
+    <h2 class="font-label-caps text-label-caps text-white/40 uppercase tracking-widest">Professional Identity</h2>
+    <div class="h-[1px] flex-grow bg-white/10"></div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {profileData.map((item) => (
+      <a 
+        href={item.href} 
+        target="_blank" 
+        class={`glass-card bento-card p-8 rounded-xl flex flex-col justify-between h-[240px] ${item.featured ? 'md:scale-110 md:z-10 bg-white/[0.08]' : ''}`}
+      >
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-white/5 rounded-lg">
+            <img 
+              src={item.iconSrc} 
+              alt={item.title} 
+              class="w-6 h-6 invert opacity-80"
+            />
+          </div>
+          <span class="material-symbols-outlined text-white/20">north_east</span>
+        </div>
+        <div>
+          <h3 class="font-h2 text-h2 text-white mb-1">{item.title}</h3>
+          <p class="font-body-md text-white/50">{item.description}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
