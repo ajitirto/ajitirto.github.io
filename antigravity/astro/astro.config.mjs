@@ -8,5 +8,5 @@ export default defineConfig({
   integrations: [tailwind()],
   site: 'https://ajitirto.github.io',
   // base: '/antigravity/astro',
-  base: isGitHubPages ? '/antigravity' : '/',
+  base: isGitHubPages ? '/antigravity/astro' : '/',
 });

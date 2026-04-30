@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload folder dist yang spesifik
-          path: ./antigravity/astro/dist/
+          path: antigravity/astro/dist
   deploy:
     needs: build
     runs-on: ubuntu-latest
