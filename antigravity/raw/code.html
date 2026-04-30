@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aji Tirto Prayogo | Software Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#ffffff",
+                        "surface-variant": "#353534",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-tertiary": "#003824",
+                        "on-secondary-container": "#e6ecff",
+                        "secondary": "#adc6ff",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-dim": "#131313",
+                        "on-surface-variant": "#c4c7c8",
+                        "on-tertiary-fixed": "#002113",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#00734e",
+                        "tertiary": "#ffffff",
+                        "surface-tint": "#c6c6c7",
+                        "on-primary-fixed": "#1a1c1c",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-container": "#0566d9",
+                        "surface-bright": "#3a3939",
+                        "surface-container-highest": "#353534",
+                        "inverse-on-surface": "#313030",
+                        "outline": "#8e9192",
+                        "outline-variant": "#444748",
+                        "inverse-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#e2e2e2",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#002e6a",
+                        "background": "#131313",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "inverse-primary": "#5d5f5f",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-primary-container": "#636565",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "tertiary-container": "#6ffbbe",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#004395",
+                        "primary-fixed": "#e2e2e2",
+                        "on-primary": "#2f3131",
+                        "on-secondary-fixed": "#001a42",
+                        "surface-container": "#201f1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "4rem",
+                        "md": "1.5rem",
+                        "xs": "0.5rem",
+                        "sm": "1rem",
+                        "unit": "4px",
+                        "lg": "2.5rem",
+                        "gutter": "24px",
+                        "container-max": "1120px"
+                    },
+                    "fontFamily": {
+                        "display": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+        }
+        .glass-zone {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        /* Specialized hover for the Bento grid cards */
+        .bento-card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+            filter: brightness(1.25);
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-[#050505]/80 backdrop-blur-[12px]">
+<nav class="max-w-[1120px] mx-auto flex justify-between items-center px-8 py-6">
+<div class="text-lg font-bold tracking-tighter text-white uppercase font-display">
+                Aji Tirto Prayogo
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] text-sm font-medium tracking-tight text-white/50 hover:text-white transition-colors duration-300" href="#">Professional</a>
+<a class="font-['Manrope'] text-sm font-medium tracking-tight text-white/50 hover:text-white transition-colors duration-300" href="#">Social</a>
+<a class="font-['Manrope'] text-sm font-medium tracking-tight text-white/50 hover:text-white transition-colors duration-300" href="#">Contact</a>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-label-caps text-[10px] uppercase tracking-widest hover:scale-105 transition-all duration-300 active:scale-95">
+                    Download CV
+                </button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-white">menu</span>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-xl px-6 max-w-[1120px] mx-auto">
+<!-- Hero Section -->
+<section class="flex flex-col items-center text-center mb-xl">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-6 border-2 border-white/10 p-1">
+<img alt="Aji Tirto Prayogo" class="w-full h-full object-cover rounded-full" data-alt="A professional portrait of a tech-focused software engineer in a moody, dark-mode inspired environment. The subject is lit by a soft, directional side light that creates sharp shadows, highlighting a determined and thoughtful expression. The background is a blurred high-tech workspace with subtle deep gray tones and minimal white light reflections, maintaining a clean, premium aesthetic. The overall mood is sophisticated, professional, and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArkQSVHqunQv1Id6sln330yeg88-pGK6xe2c1C823_Ay5xSmyIX4BooCMMR5paBXqXvBtuhg8zRopkPCO0RvrQ2ZAtOCIB58hPXyEdmRTUmDuuhux_cXBQq3N43hB5DWghS9UWlnEHv6c7Ng1JvhRBOLel77C4NMe2iWH6IqNoT7KOn5ZtX1HTj5gPZvuFy-1qph0MhcZy409WI1Kw5H5DVTz8IkvdKjXmrdnclvwoo1YkfS4I3PbOVcIp0rBpLTYqsZmNKxEBbtc3"/>
+</div>
+<h1 class="font-display text-display text-white mb-4">Aji Tirto Prayogo</h1>
+<p class="font-body-lg text-white/60 max-w-2xl">
+                Full stack, devops enthusiast, software engineer. <br/>
+                Crafting scalable digital solutions with surgical precision and a focus on architectural integrity.
+            </p>
+</section>
+<!-- Professional Group (Bento Style) -->
+<section class="mb-xl">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[1px] flex-grow bg-white/10"></div>
+<h2 class="font-label-caps text-label-caps text-white/40 uppercase tracking-widest">Professional Identity</h2>
+<div class="h-[1px] flex-grow bg-white/10"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- LinkedIn -->
+<a class="glass-card bento-card p-8 rounded-xl flex flex-col justify-between h-[240px]" href="https://www.linkedin.com/in/aji-tirto-prayogo/" target="_blank">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-white/5 rounded-lg">
+<img alt="LinkedIn" class="w-6 h-6 invert opacity-80" data-alt="A monochromatic LinkedIn icon rendered in a sleek, minimalist style. The icon is crisp and high-contrast, appearing as a pure white graphic on a deep dark background. The lighting is flat but sharp, suggesting a digital interface element within a high-end software ecosystem. The overall aesthetic is clean, professional, and consistent with a premium dark-themed UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Z8ZeLKNu99m2QeAY3GPM8weIphaYxGciSqEf82wQ6KMbOjO9fB2rA0Ri653GEZWrEFh4m5dFOXz6hkcWL6fgqAq1l5Dy5ERj8rwlslkzf9X5rLCfYG3gbfWaYnJUcUxXc2bfPXqx0-dvdrPLfmZQLgi2VstIJDlAHkfNWVB4MGMClyz2U32iwFWognek1fw73c74mjz1AVyolv7RMqyKh_s30-HqOua_PKwmyMONYuEoRfh-BYWVStFToArg2_gzeSVBv5LZIVhd"/>
+</div>
+<span class="material-symbols-outlined text-white/20">north_east</span>
+</div>
+<div>
+<h3 class="font-h2 text-h2 text-white mb-1">LinkedIn</h3>
+<p class="font-body-md text-white/50">Professional network &amp; Career history</p>
+</div>
+</a>
+<!-- GitHub -->
+<a class="glass-card bento-card p-8 rounded-xl flex flex-col justify-between h-[240px] md:scale-110 md:z-10 bg-white/[0.08]" href="https://github.com/ajitirto" target="_blank">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-white/5 rounded-lg">
+<img alt="GitHub" class="w-6 h-6 invert opacity-80" data-alt="A stylized GitHub Octocat logo displayed in a minimalist white-on-dark color scheme. The lighting is subtle, creating a soft glow around the sharp edges of the icon. The background is a rich, textured dark gray, providing a modern and technical feel. This visual represents a developer's digital identity with a focus on clean lines and a sophisticated dark mode palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9jj8WAbWvr1d4gmZyhC_rmj5mFBvYTBeXky8UabHYexLdadU6HY1zULHkJWakGwenSbAB23ZuKLXht9HTo0A65gZWMZ-whzlSGvK906M7VGRsM2wYS4BiODYud7uUO6h_yLMh-gnpucfEtOysh89a1WatPVo5dPaBLz4y8Os88IGNLfgBN6vZdr7NNNy6kRtYz9p3lj7XS5E1WbvUG964nPcMupPlor9diM3m3zi0xmmPPjR3Q5BxjA4RT38OaEh3t0PF_4rvXoXC"/>
+</div>
+<span class="material-symbols-outlined text-white/20">north_east</span>
+</div>
+<div>
+<h3 class="font-h2 text-h2 text-white mb-1">GitHub</h3>
+<p class="font-body-md text-white/50">Open source contributions &amp; Repositories</p>
+</div>
+</a>
+<!-- GitLab -->
+<a class="glass-card bento-card p-8 rounded-xl flex flex-col justify-between h-[240px]" href="https://gitlab.com/ajitirto" target="_blank">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-white/5 rounded-lg">
+<img alt="GitLab" class="w-6 h-6 invert opacity-80" data-alt="A sleek, white GitLab fox logo presented against a deep black, minimalist background. The logo is rendered with clean geometric lines, emphasizing technical precision. The environment feels like a high-end dashboard, using a monochromatic palette to convey a sense of professional software engineering and modern devops culture. The lighting is uniform and soft, highlighting the icon's sharp silhouette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSB1B5GkLoTRwUYMb1mkq5sn0DXn2nlh_UsXmH4ISnTTqDwsfcRVkkOPb_x6t3ojbDufZ6FXPWFeaTkO7QCdfOgx32r7qsPCoQellhVAB-VJqNxJbcLrmZW3Hb83qV-k7BWvScaJh8Qumqrmpe7hgG6SPISxg4XMMmbxPwDE-ChnvYX6BSwMGIPRZwjN2NEjsa_XToxYbQWh-WLPbIB-lMBmo3TAsf7KpbOGcOEWlRzkknQ9nkPnwBnhQPzHR7b5iS_ZZTBWhjTJhI"/>
+</div>
+<span class="material-symbols-outlined text-white/20">north_east</span>
+</div>
+<div>
+<h3 class="font-h2 text-h2 text-white mb-1">GitLab</h3>
+<p class="font-body-md text-white/50">Enterprise projects &amp; CI/CD workflows</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Social Group -->
+<!-- Presentations Section -->
+<section class="mb-xl">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[1px] flex-grow bg-white/10"></div>
+<h2 class="font-label-caps text-label-caps text-white/40 uppercase tracking-widest">Presentations</h2>
+<div class="h-[1px] flex-grow bg-white/10"></div>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Presentation Item 1 -->
+<div class="glass-card p-6 rounded-lg flex justify-between items-center group cursor-pointer">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white/40 group-hover:text-white transition-colors">present_to_all</span>
+</div>
+<div>
+<h4 class="font-body-lg font-semibold text-white mb-1">Architecting Resilient Cloud Environments</h4>
+<p class="font-body-md text-white/40 text-sm">TechSummit 2023 • November 14</p>
+</div>
+</div>
+<div class="hidden sm:block">
+<span class="material-symbols-outlined text-white/20 group-hover:text-white transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Presentation Item 2 -->
+<div class="glass-card p-6 rounded-lg flex justify-between items-center group cursor-pointer">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white/40 group-hover:text-white transition-colors">settings_input_component</span>
+</div>
+<div>
+<h4 class="font-body-lg font-semibold text-white mb-1">Micro-Frontends: Scalable Patterns</h4>
+<p class="font-body-md text-white/40 text-sm">JS Conf Asia • August 22</p>
+</div>
+</div>
+<div class="hidden sm:block">
+<span class="material-symbols-outlined text-white/20 group-hover:text-white transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Presentation Item 3 -->
+<div class="glass-card p-6 rounded-lg flex justify-between items-center group cursor-pointer">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white/40 group-hover:text-white transition-colors">terminal</span>
+</div>
+<div>
+<h4 class="font-body-lg font-semibold text-white mb-1">Zero-Trust Security in CI/CD Pipelines</h4>
+<p class="font-body-md text-white/40 text-sm">DevOps Days • June 05</p>
+</div>
+</div>
+<div class="hidden sm:block">
+<span class="material-symbols-outlined text-white/20 group-hover:text-white transition-colors">arrow_forward</span>
+</div>
+</div>
+</div>
+</section><section class="mb-xl">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[1px] flex-grow bg-white/10"></div>
+<h2 class="font-label-caps text-label-caps text-white/40 uppercase tracking-widest">Social Presence</h2>
+<div class="h-[1px] flex-grow bg-white/10"></div>
+</div>
+<div class="flex justify-center gap-6">
+<!-- X (Twitter) -->
+<a class="glass-card w-14 h-14 rounded-full flex items-center justify-center group" href="https://x.com/prayogo_tirto" target="_blank" title="X (Twitter)">
+<span class="text-white font-bold text-lg group-hover:scale-110 transition-transform">X</span>
+</a>
+<!-- Instagram -->
+<a class="glass-card w-14 h-14 rounded-full flex items-center justify-center group" href="https://instagram.com/aji_tirto_prayogo" target="_blank" title="Instagram">
+<span class="material-symbols-outlined text-white text-2xl group-hover:scale-110 transition-transform">photo_camera</span>
+</a>
+<!-- Blog -->
+<a class="glass-card w-14 h-14 rounded-full flex items-center justify-center group" href="https://blog.ajitirto.my.id" target="_blank" title="Blog">
+<span class="material-symbols-outlined text-white text-2xl group-hover:scale-110 transition-transform">article</span>
+</a>
+</div>
+</section>
+<!-- Skill Tags -->
+<section class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto opacity-60">
+<span class="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 font-label-caps text-[10px] uppercase text-white/60">Full Stack</span>
+<span class="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 font-label-caps text-[10px] uppercase text-white/60">DevOps</span>
+<span class="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 font-label-caps text-[10px] uppercase text-white/60">React &amp; Node</span>
+<span class="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 font-label-caps text-[10px] uppercase text-white/60">Cloud Native</span>
+<span class="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 font-label-caps text-[10px] uppercase text-white/60">System Design</span>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-white/10 bg-[#050505]">
+<div class="max-w-[1120px] mx-auto flex flex-col md:flex-row justify-between items-center px-8 gap-6">
+<span class="font-['Manrope'] text-xs uppercase tracking-widest text-white/40">
+                © 2024 Aji Tirto Prayogo. Built with precision.
+            </span>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-white/30 hover:text-white transition-colors duration-300" href="https://github.com/ajitirto">GitHub</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-white/30 hover:text-white transition-colors duration-300" href="https://www.linkedin.com/in/aji-tirto-prayogo/">LinkedIn</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-white/30 hover:text-white transition-colors duration-300" href="https://gitlab.com/ajitirto">GitLab</a>
+</div>
+</div>
+</footer>
+</body></html>
