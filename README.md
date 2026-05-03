@@ -1,43 +1,46 @@
-# Astro Starter Kit: Minimal
+# Antigravity Astro Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Teknologi yang Digunakan
 
-## 🚀 Project Structure
+*   **Framework:** [Astro](https://astro.build/) (v4+)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **Runtime:** Node.js (v22 recommended)
+*   **CI/CD:** GitHub Actions
+*   **Deployment:** GitHub Pages
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📂 Struktur Proyek
 
+Berikut adalah penjelasan mengenai struktur direktori utama dalam proyek ini:
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+├── .github/workflows      # Konfigurasi CI/CD untuk GitHub Actions
+├── antigravity
+│   └── raw                # Aset mentah, dokumentasi desain, dan mockup
+├── public                 # Aset statis (favicon, gambar, robot.txt)
+├── src
+│   ├── components         # Komponen UI modular (Hero, BentoGrid, Footer, dll)
+│   ├── layouts            # Template layout utama
+│   ├── pages              # Entry point halaman (index.astro)
+│   └── styles             # File konfigurasi CSS global
+├── astro.config.mjs       # Konfigurasi utama Astro
+├── tailwind.config.mjs    # Konfigurasi Tailwind CSS
+└── package.json           # Dependensi proyek dan skrip build
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Pengembangan & Deployment
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Any static assets, like images, can be placed in the `public/` directory.
+### 1. Prasyarat Sistem
+Pastikan perangkat Anda telah terpasang:
+*   **Node.js**: Versi `v22.x.x` 
+*   **Package Manager**: `npm` versi `10.x.x` atau lebih baru
 
-## 🧞 Commands
+### 2. Pengembangan Lokal (Local Development)
 
-All commands are run from the root of the project, from a terminal:
+```bash
+# Instalasi dependensi menggunakan flag legacy peer deps jika diperlukan
+npm install --legacy-peer-deps
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# Menjalankan server lokal
+npm run dev
+```
