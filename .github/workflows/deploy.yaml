@@ -17,17 +17,18 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
-          cache-dependency-path: 'antigravity/astro/package-lock.json'
+          # Path diubah ke root
+          cache-dependency-path: 'package-lock.json'
       - name: Install & Build
         run: |
-          cd antigravity/astro
+          # Perintah cd dihapus karena sudah di root
           npm install --legacy-peer-deps
           npm run build 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload folder dist yang spesifik
-          path: antigravity/astro/dist
+          # Astro default build output folder adalah 'dist' di root
+          path: dist
   deploy:
     needs: build
     runs-on: ubuntu-latest
