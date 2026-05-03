@@ -1,6 +1,5 @@
 # Antigravity Astro Portfolio
 
-
 ## 🚀 Teknologi yang Digunakan
 
 *   **Framework:** [Astro](https://astro.build/) (v4+)
